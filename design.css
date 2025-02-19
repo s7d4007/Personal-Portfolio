@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Gupter", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: violet;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+hr {
+    border: 1px solid #47003d;
+}
+
+nav {
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns nav items to the right */
+    align-items: center;
+    width: 100%;
+    /* Only need to set this once */
+    padding: 0px;
+    background-color: purple;
+    height: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: violet;
+    font-weight: 500;
+}
+
+/* Home Section  */
+#Home {
+    display: flex;
+}
+
+.left {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 650px;
+}
+
+.right {
+    display: flex;
+    padding: 10px;
+    font-size: 3.5rem;
+    align-items: center;
+    width: 50%;
+    height: 650px;
+    flex-direction: column;
+    /* Stack text vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    text-align: center;
+    /* Center-align text */
+}
+
+.format {
+    font-size: 4rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: #47003d;
+}
+
+#element {
+    display: inline;
+    /* Keeps the text and cursor on the same line */
+    vertical-align: middle;
+    /* Ensures the cursor aligns properly with the text */
+    font-size: 4rem;
+    /* Font size for the last line */
+    color: #47003d;
+    /* Subtle color */
+    font-weight: 600;
+    /* Bold font */
+    font-style: italic;
+    /* Optional: Italic for emphasis */
+    line-height: 1.5;
+    /* Ensures proper vertical alignment */
+    white-space: nowrap;
+}
+
+img {
+    width: 50%;
+    border-radius: 100%;
+    margin: 20px 20px 20px 200px;
+    height: auto;
+    box-shadow: 5px 5px 15px rgb(81, 0, 104);
+    /* Shadow properties */
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.hr {
+    margin: 0;
+    padding: 0;
+    border: 3px dashed #47003d;
+}
+
+/* Projects Section */
+#Projects {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    height: auto;
+}
+
+.desc {
+    border: 2px solid purple;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition for both */
+}
+
+.desc:hover {
+    transform: scale(1.001);
+    /* Smooth scaling effect */
+    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+}
+
+/* Resume Section */
+#Resume {
+    height: 700px;
+}
+
+.resume {
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
+    font-family: "Gupter", sans-serif;
+    font-weight: 700;
+}
+
+#resume {
+    align-items: center;
+    display: flex;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: "Gupter", sans-serif;
+    font-size: larger;
+    font-weight: 900;
+    background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
+    color: rgb(39, 0, 39);
+    border: 2px solid rgb(39, 0, 39);
+    width: auto;
+}
+
+#resume img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 0;
+
+}
+
+#resume a {
+    text-decoration: none;
+    color: rgb(39, 0, 39);
+}
+
+#resume:hover {
+    transform: scale(1.001);
+    /* Smooth scaling effect */
+    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    cursor: pointer;
+}
+
+/* Certifications Section */
+#Certifications {
+    height: 650px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+}
+
+.card-image {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-description {
+    padding: 15px;
+    background-color: rgb(81, 0, 104);
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(238, 130, 238);
+}
+
+.card:hover {
+    transform: scale(1.001);
+    /* Smooth scaling effect */
+    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    cursor: pointer;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contact Section */
+#Contact {
+    height: 650px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#give{
+    align-items: center;
+    display: flex;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: "Gupter", sans-serif;
+    font-size: larger;
+    font-weight: 900;
+    background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
+    color: rgb(39, 0, 39);
+    border: 2px solid rgb(39, 0, 39);
+    width: auto;
+}
+
+#give:hover{
+    transform: scale(1.001);
+    /* Smooth scaling effect */
+    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: purple;
+    /* Light background color */
+    text-align: center;
+    /* Center align the text */
+    padding: 10px 0;
+    /* Add padding */
+    font-size: 25px;
+    /* Small, readable font size */
+    color: #555;
+    /* Subtle font color */
+    border-top: 1px solid #ddd;
+    /* Optional top border for separation */
+    color: violet;
+    /* Match font color with the rest of the site */
+    font-weight: 500;
+}
+
+footer p {
+    margin: 0;
+    /* Remove default margin */
+    font-family: 'Gupter', serif;
+    /* Match font style with the rest of the site */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    #Home {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .right {
+        width: 90%;
+        /* Increase width for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 1rem;
+    }
+}

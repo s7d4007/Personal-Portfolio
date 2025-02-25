@@ -28,7 +28,7 @@ hr {
 }
 
 .hr {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     border: 3px dashed #47003d;
 }
@@ -76,6 +76,11 @@ nav ul li a:focus {
     outline: 2px solid #47003d;
     outline-offset: 4px;
 }
+
+a{
+    text-decoration: none;
+}
+
 
 /* Home Section */
 #Home {
@@ -143,8 +148,7 @@ img:hover {
 
 /* Projects Section */
 #Projects {
-    padding: 20px 10px 0;
-    margin: 10px;
+    margin: 0px;
     height: auto;
 }
 .projects{
@@ -292,12 +296,16 @@ img:hover {
 /* Contact Section */
 #Contact {
     height: 650px;
-}
-
-.form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.format {
+    font-size: xx-large;
+    color: rgb(39, 0, 39);
 }
 
 #give {

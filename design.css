@@ -14,7 +14,8 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: violet;
-    line-height: 1.6; /* Added for better readability */
+    line-height: 1.6;
+    /* Added for better readability */
 }
 
 /* Typography */
@@ -77,7 +78,7 @@ nav ul li a:focus {
     outline-offset: 4px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -92,7 +93,7 @@ a{
     display: flex;
     align-items: center;
     width: 50%;
-    height: 650px;
+    height: 600px;
 }
 
 .right {
@@ -100,7 +101,7 @@ a{
     padding: 10px;
     font-size: 3.5rem;
     width: 50%;
-    height: 650px;
+    height: 600px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -126,22 +127,26 @@ a{
 }
 
 /* Images */
-img {
+.profile {
     width: 50%;
-    max-width: 300px; /* Set a maximum width */
-    border-radius: 50%; /* Changed to 50% for better performance */
-    margin: 20px auto; /* Centered the image */
+    max-width: 300px;
+    /* Set a maximum width */
+    border-radius: 50%;
+    /* Changed to 50% for better performance */
+    margin: 20px auto;
+    /* Centered the image */
     height: auto;
     box-shadow: 5px 5px 15px rgb(81, 0, 104);
     transition: transform 0.3s ease-in-out;
 }
 
-img:hover {
+.profile:hover {
     transform: scale(1.1);
 }
 
 .visit {
-    border-radius: 50%; /* Changed to 50% for better performance */
+    border-radius: 50%;
+    /* Changed to 50% for better performance */
     width: 80px;
     box-shadow: 5px 5px 15px rgb(81, 0, 104);
 }
@@ -150,18 +155,24 @@ img:hover {
 #Projects {
     margin: 0px;
     height: auto;
+    padding: 0 10px;
 }
-.projects{
+
+.projects {
     align-items: center;
     display: flex;
-    border-radius: 50px;  /* halved from 100px */
-    padding: 5px;         /* halved from 10px */
+    border-radius: 50px;
+    /* halved from 100px */
+    padding: 5px;
+    /* halved from 10px */
     font-family: "Gupter", sans-serif;
-    font-size: medium;    /* reduced from larger */
+    font-size: medium;
+    /* reduced from larger */
     font-weight: 900;
     background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
     color: rgb(39, 0, 39);
-    border: 1px solid rgb(39, 0, 39); /* halved from 2px */
+    border: 1px solid rgb(39, 0, 39);
+    /* halved from 2px */
     width: auto;
 }
 
@@ -185,12 +196,12 @@ img:hover {
     box-shadow: 2px 2px 10px rgb(81, 0, 104);
 }
 
-/* Resume Section */
-#Resume {
+/* Skills Section */
+#Skills {
     height: 700px;
 }
 
-.resume {
+.skills {
     margin: 10px;
     padding: 10px;
     font-size: larger;
@@ -198,59 +209,45 @@ img:hover {
     font-weight: 700;
 }
 
-#resume {
-    align-items: center;
+.skill-box {
     display: flex;
-    border-radius: 100px;
+    margin: 10px;
+    padding: 15px 25px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(81, 0, 104, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#skill-section {
+    display: flex;
+    margin: 10px;
     padding: 10px;
-    font-family: "Gupter", sans-serif;
-    font-size: larger;
-    font-weight: 900;
-    background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
-    color: rgb(39, 0, 39);
-    border: 2px solid rgb(39, 0, 39);
-    width: auto;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgb(235, 65, 235);
 }
 
-#resume img {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px 0 0;
+#skill-section:hover {
+    transition: transform 0.3s ease-in-out;
 }
 
-#resume a {
-    text-decoration: none;
-    color: rgb(39, 0, 39);
-}
 
-#resume:hover {
-    transform: scale(1.001);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
-    cursor: pointer;
-}
-
-#resume:focus {
-    outline: 2px solid #47003d;
-    outline-offset: 4px;
-}
-
-#poster {
-    width: 95%;
-    max-width: 600px; /* Set a maximum width */
-    margin: auto; /* Center the image */
-    display: block; /* Ensure the image is a block element */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
-}
-
-#poster:hover{
-    transform: scale(1.1);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+.skill-section {
+    width: 30%;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 /* Certifications Section */
 #Certifications {
-    height: 650px;
+    height: 550px;
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
 
 .cards {
@@ -266,7 +263,8 @@ img:hover {
     justify-content: center;
     border: 1px solid #ccc;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
+    height: 450px;
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -274,13 +272,18 @@ img:hover {
 }
 
 .card-image {
-    height: auto;
+    height: 150px;
+    width: 200px;
+    margin: 10px 0;
     align-items: center;
     justify-content: center;
+    transition: transform 0.7s ease-in-out;
+    /* Smooth transition */
 }
 
 .card-description {
     padding: 15px;
+    height: 250px;
     background-color: rgb(81, 0, 104);
     text-align: center;
     border-radius: 10px;
@@ -293,6 +296,12 @@ img:hover {
     cursor: pointer;
 }
 
+.card:hover .card-image {
+    transform: scale(1.5);
+    /* 50% zoom */
+    transition: transform 0.7s ease-in-out;
+}
+
 /* Contact Section */
 #Contact {
     height: 650px;
@@ -301,6 +310,7 @@ img:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 20px;
 }
 
 .format {
@@ -333,17 +343,26 @@ img:hover {
     outline-offset: 4px;
 }
 
-.visit{
+.visit {
     background-color: black;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .redirect {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px;    /* Increased margin for more spacing between elements */
-    padding: 20px;   /* Increased padding for more internal spacing */
-    gap: 30px;       /* Added gap property to create space between flex items */
+    margin: 50px;
+    /* Increased margin for more spacing between elements */
+    padding: 20px;
+    /* Increased padding for more internal spacing */
+    gap: 30px;
+    /* Added gap property to create space between flex items */
+}
+
+.visit:hover {
+    transform: scale(1.2);
 }
 
 /* Footer */

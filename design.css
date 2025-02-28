@@ -1,4 +1,13 @@
 /* Global Styles */
+
+:root {
+    --primary-navy: #1e2b38;
+    --primary-teal: #16a085;
+    --primary-light: #ecf0f1;
+    --accent-orange: #0672ff;
+    --accent-yellow: #400ff1;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,25 +22,25 @@ body {
     font-family: "Gupter", serif;
     font-weight: 400;
     font-style: normal;
-    background-color: violet;
+    background-color: var(--primary-light);
     line-height: 1.6;
-    /* Added for better readability */
 }
 
 /* Typography */
 h1 {
     text-align: center;
     font-size: 4rem;
+    color: var(--primary-navy);
 }
 
 hr {
-    border: 1px solid #47003d;
+    border: 1px solid var(--primary-teal);
 }
 
 .hr {
     margin: 5px;
     padding: 0;
-    border: 3px dashed #47003d;
+    border: 3px dashed var(--primary-teal);
 }
 
 /* Navigation */
@@ -42,7 +51,7 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0px;
-    background-color: purple;
+    background-color: var(--primary-navy);
     height: 70px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -64,17 +73,17 @@ nav ul li {
 nav ul li a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: violet;
+    color: var(--primary-light);
     font-weight: 500;
 }
 
 nav ul li a:hover {
     cursor: pointer;
-    color: whitesmoke;
+    color: var(--accent-orange);
 }
 
 nav ul li a:focus {
-    outline: 2px solid #47003d;
+    outline: 2px solid var(--primary-teal);
     outline-offset: 4px;
 }
 
@@ -82,10 +91,10 @@ a {
     text-decoration: none;
 }
 
-
 /* Home Section */
 #Home {
     display: flex;
+    background-color: var(--primary-light);
 }
 
 .left {
@@ -94,6 +103,7 @@ a {
     align-items: center;
     width: 50%;
     height: 600px;
+    background-color: var(--primary-light);
 }
 
 .right {
@@ -106,20 +116,21 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: var(--primary-navy);
 }
 
 .format {
     font-size: 4rem;
     font-weight: bolder;
     font-style: italic;
-    color: #47003d;
+    color: var(--primary-teal);
 }
 
 #element {
     display: inline;
     vertical-align: middle;
     font-size: 4rem;
-    color: #47003d;
+    color: var(--primary-teal);
     font-weight: 600;
     font-style: italic;
     line-height: 1.5;
@@ -130,13 +141,10 @@ a {
 .profile {
     width: 50%;
     max-width: 300px;
-    /* Set a maximum width */
     border-radius: 50%;
-    /* Changed to 50% for better performance */
     margin: 20px auto;
-    /* Centered the image */
     height: auto;
-    box-shadow: 5px 5px 15px rgb(81, 0, 104);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -146,9 +154,8 @@ a {
 
 .visit {
     border-radius: 50%;
-    /* Changed to 50% for better performance */
     width: 80px;
-    box-shadow: 5px 5px 15px rgb(81, 0, 104);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Projects Section */
@@ -156,35 +163,35 @@ a {
     margin: 0px;
     height: auto;
     padding: 0 10px;
+    background-color: var(--primary-light);
 }
 
 .projects {
     align-items: center;
     display: flex;
     border-radius: 50px;
-    /* halved from 100px */
     padding: 5px;
-    /* halved from 10px */
     font-family: "Gupter", sans-serif;
     font-size: medium;
-    /* reduced from larger */
     font-weight: 900;
-    background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
-    color: rgb(39, 0, 39);
-    border: 1px solid rgb(39, 0, 39);
-    /* halved from 2px */
-    width: auto;
+    background: linear-gradient(to right, var(--primary-teal), var(--primary-navy));
+    color: var(--primary-light);
+    border: 1px solid var(--primary-teal);
+}
+
+.projects a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .projects:hover {
     transform: scale(1.001);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-
 .desc {
-    border: 2px solid purple;
+    border: 2px solid var(--primary-teal);
     margin: 10px;
     padding: 10px;
     font-size: 1rem;
@@ -193,54 +200,52 @@ a {
 
 .desc:hover {
     transform: scale(1.001);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Skills Section */
 #Skills {
-    height: 700px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--primary-light);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.skills-section h1 {
+    text-align: center;
+    color: var(--primary-navy);
 }
 
 .skills {
-    margin: 10px;
-    padding: 10px;
-    font-size: larger;
-    font-family: "Gupter", sans-serif;
-    font-weight: 700;
-}
-
-.skill-box {
     display: flex;
-    margin: 10px;
-    padding: 15px 25px;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(81, 0, 104, 0.2);
-    transition: all 0.3s ease-in-out;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-#skill-section {
-    display: flex;
-    margin: 10px;
+.skill-category {
+    width: 45%;
+}
+
+.skill-category h2 {
+    color: var(--primary-teal);
+    border-bottom: 2px solid var(--primary-teal);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    background-color: var(--primary-light);
+    margin: 5px 0;
     padding: 10px;
-    width: 400px;
-    height: 150px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    background-color: rgb(235, 65, 235);
-}
-
-#skill-section:hover {
-    transition: transform 0.3s ease-in-out;
-}
-
-
-.skill-section {
-    width: 30%;
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-teal);
 }
 
 /* Certifications Section */
@@ -248,6 +253,7 @@ a {
     height: 550px;
     padding: 0 10px;
     margin-bottom: 10px;
+    background-color: var(--primary-light);
 }
 
 .cards {
@@ -261,7 +267,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-teal);
     border-radius: 10px;
     overflow: visible;
     height: 450px;
@@ -269,6 +275,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
     padding: 10px;
+    background-color: var(--primary-light);
 }
 
 .card-image {
@@ -278,27 +285,25 @@ a {
     align-items: center;
     justify-content: center;
     transition: transform 0.7s ease-in-out;
-    /* Smooth transition */
 }
 
 .card-description {
     padding: 15px;
     height: 250px;
-    background-color: rgb(81, 0, 104);
+    background-color: var(--primary-navy);
     text-align: center;
     border-radius: 10px;
-    color: rgb(238, 130, 238);
+    color: var(--primary-light);
 }
 
 .card:hover {
     transform: scale(1.001);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 .card:hover .card-image {
     transform: scale(1.5);
-    /* 50% zoom */
     transition: transform 0.7s ease-in-out;
 }
 
@@ -311,11 +316,12 @@ a {
     justify-content: center;
     text-align: center;
     margin-top: 20px;
+    background-color: var(--primary-light);
 }
 
 .format {
     font-size: xx-large;
-    color: rgb(39, 0, 39);
+    color: var(--primary-navy);
 }
 
 #give {
@@ -326,27 +332,25 @@ a {
     font-family: "Gupter", sans-serif;
     font-size: larger;
     font-weight: 900;
-    background: linear-gradient(to right, rgb(253, 13, 253), rgb(157, 0, 157));
-    color: rgb(39, 0, 39);
-    border: 2px solid rgb(39, 0, 39);
-    width: auto;
+    background: linear-gradient(to right, var(--accent-orange), var(--accent-yellow));
+    color: var(--primary-navy);
+    border: 2px solid var(--accent-orange);
 }
 
 #give:hover {
     transform: scale(1.001);
-    box-shadow: 2px 2px 10px rgb(81, 0, 104);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
 #give:focus {
-    outline: 2px solid #47003d;
+    outline: 2px solid var(--primary-teal);
     outline-offset: 4px;
 }
 
 .visit {
     background-color: black;
     transition: transform 0.3s ease-in-out;
-
 }
 
 .redirect {
@@ -354,11 +358,8 @@ a {
     align-items: center;
     justify-content: center;
     margin: 50px;
-    /* Increased margin for more spacing between elements */
     padding: 20px;
-    /* Increased padding for more internal spacing */
     gap: 30px;
-    /* Added gap property to create space between flex items */
 }
 
 .visit:hover {
@@ -367,13 +368,13 @@ a {
 
 /* Footer */
 footer {
-    background-color: purple;
+    background-color: var(--primary-navy);
     text-align: center;
     padding: 10px 0;
     font-size: 25px;
-    color: violet;
+    color: var(--primary-light);
     font-weight: 500;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--primary-teal);
 }
 
 footer p {
@@ -384,28 +385,70 @@ footer p {
 /* Media Queries */
 @media (max-width: 1024px) {
     nav ul li {
-        margin: 0 20px;
+        margin: 0 15px;
     }
 
-    .left,
+    .left, .right {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    #Home {
+        flex-direction: column;
+    }
+
     .right {
-        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    .format, #element {
+        font-size: 3rem;
+    }
+
+    .cards {
+        flex-wrap: wrap;
     }
 
     .card {
-        width: 250px;
+        width: 280px;
+        margin: 10px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill-category {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    #Home {
-        flex-direction: column;
-        align-items: center;
+    nav {
+        justify-content: center;
     }
 
-    .left,
-    .right {
-        width: 90%;
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .profile {
+        width: 60%;
+    }
+
+    .projects {
+        font-size: 0.9rem;
+    }
+
+    #Certifications {
+        height: auto;
+    }
+
+    .redirect {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     footer p {
@@ -415,19 +458,45 @@ footer p {
 
 @media (max-width: 480px) {
     nav ul li {
-        margin: 0 10px;
+        margin: 0 8px;
     }
 
-    .left,
-    .right {
-        width: 100%;
-    }
-
-    .card {
-        width: 200px;
+    nav ul li a {
+        font-size: 1rem;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .right {
+        font-size: 2rem;
+    }
+
+    .format, #element {
+        font-size: 2.2rem;
+    }
+
+    .profile {
+        width: 80%;
+    }
+
+    .desc {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #give {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .redirect {
+        margin: 20px;
+        padding: 10px;
     }
 }

@@ -242,6 +242,8 @@ a {
 
 /* Projects Section */
 #Projects {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   height: auto;
   padding: 0 10px;
@@ -250,6 +252,7 @@ a {
 }
 
 .projects {
+  margin: 10px;
   position: relative;
   display: flex;
   font-size: x-large;
@@ -272,7 +275,7 @@ a {
 }
 
 .projects:hover {
-  box-shadow: inset -3px -3px 7px rgba(0, 243, 255, 0.3), inset 3px 3px 7px rgba(0, 243, 255, 0.3);
+  box-shadow: inset -3px -3px 7px rgba(0, 242, 255, 0.823), inset 3px 3px 7px rgba(0, 242, 255, 0.648);
   /* Inset shadows for hover effect */
 }
 
@@ -294,8 +297,27 @@ a {
 
 .desc:hover {
   transform: scale(1.001);
-  box-shadow: 2px 2px 10px var(--accent-yellow);
+  box-shadow: 2px 2px 10px var(--primary-teal);
   /* Neon hover */
+}
+
+.view-more-link {
+  color: var(--primary-teal);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid var(--primary-teal);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.view-more-link:hover {
+  color: var(--background-dark);
+  box-shadow:  0 0 15px 5px var(--primary-teal);
 }
 
 /* Skills Section */
@@ -407,6 +429,10 @@ a {
   border-radius: 10px;
   color: var(--primary-teal);
   /* Neon */
+}
+
+p{
+  overflow: hidden;
 }
 
 .card:hover {
